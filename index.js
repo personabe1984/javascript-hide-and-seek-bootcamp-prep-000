@@ -7,7 +7,8 @@ function nestedTarget(){
 }
 
 function deepestChild(){
-  const deepest = document.getElementById('app');
+  const deepest = document.getElementById('app').querySelector('div#grand-node').querySelectorAll('div');
+  
   return deepest;
 }
 
@@ -21,4 +22,4 @@ function increaseRankBy(n){
 
 
 
-console.log(nestedTarget());
+
