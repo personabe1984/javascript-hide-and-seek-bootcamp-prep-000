@@ -7,8 +7,16 @@ function nestedTarget(){
 }
 
 function deepestChild(){
-  const deepest = document.getElementById('app').querySelector('div#grand-node').querySelectorAll('div');
-  
+  let node = document.getElementById('grand-node')
+  let nextNode = node.children[0]
+
+  while (nextNode) {
+    node = nextNode
+    nextNode = node.children[0]
+  }
+
+  return node
+}
 }
 
 function increaseRankBy(n){
